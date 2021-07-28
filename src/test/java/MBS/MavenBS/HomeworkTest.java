@@ -172,6 +172,7 @@ package MBS.MavenBS;
 		    driver.quit();	
 		}
 		}
+	  @Test
 	  public void testMethodsThree() {
 	        long id = Thread.currentThread().getId();
 	        System.out.println("Simple test-method Three. Thread id is: " + id);
