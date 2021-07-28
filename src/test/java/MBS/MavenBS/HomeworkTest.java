@@ -4,9 +4,7 @@ package MBS.MavenBS;
 
 	import java.net.MalformedURLException;
 	import java.net.URL;
-	import java.util.Hashtable;
-	import java.util.Iterator;
-	import java.util.Set;
+
 	import java.lang.Thread;
 	import org.junit.Assert;
 	import org.openqa.selenium.By;
