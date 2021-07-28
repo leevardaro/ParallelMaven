@@ -15,7 +15,7 @@ package MBS.MavenBS;
 	import org.openqa.selenium.remote.RemoteWebDriver;
 	import org.openqa.selenium.support.ui.ExpectedConditions;
 	import org.openqa.selenium.support.ui.WebDriverWait;
-	import org.testng.annotations.Test;
+	import org.testng.annotations.*;
 
 	public class HomeworkTest {
 
