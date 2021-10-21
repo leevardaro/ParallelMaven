@@ -410,8 +410,12 @@ package MBS.MavenBS;
 
 			WebDriverWait wait = new WebDriverWait(driver, 10);
 			driver.get("https://localhost:8080");
+
+			SessionId session = ((RemoteWebDriver) driver).getSessionId();
+			String sID = session.toString();
+
 			try {
-				wait.until(ExpectedConditions.titleContains("Sign in [Jenkins]"))
+				wait.until(ExpectedConditions.titleContains("Sign in [Jenkins]"));
 				String putEndpoint = "https://" + username + ":" + accessKey + "@api.browserstack.com/automate/sessions/" + sID + ".json";
 
 				Unirest.setTimeouts(0, 0);
