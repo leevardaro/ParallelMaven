@@ -33,6 +33,7 @@ package MBS.MavenBS;
 		  public static String browserstackLocalIdentifier = System.getenv("BROWSERSTACK_LOCAL_IDENTIFIER");
 		  public String URL = "https://" + username + ":" + accessKey + "@hub-cloud.browserstack.com/wd/hub";
 		  public static final String baseUrl = "https://www.google.com";
+
 		
 	  @Test
 	  
@@ -41,6 +42,7 @@ package MBS.MavenBS;
 		  System.out.println("Simple test-method One. Thread id is: " + id);
 		  System.out.println("username is: " + username);
 		  System.out.println("password is: " + accessKey);
+		  System.out.println("Url is: " +URL);
 		  DesiredCapabilities caps = new DesiredCapabilities();
 		  caps.setCapability("browserName", "Chrome");
 		  caps.setCapability("browser_version", "latest");
@@ -76,7 +78,7 @@ package MBS.MavenBS;
 			  String putEndpoint = "https://" + username + ":" + accessKey + "@api.browserstack.com/automate/sessions/" + sID + ".json";
 			  System.out.println(putEndpoint);
 
-			  System.out.println(putEndpoint);
+
 
 			  Unirest.setTimeouts(0, 0);
 			  String response = Unirest.put(putEndpoint)
