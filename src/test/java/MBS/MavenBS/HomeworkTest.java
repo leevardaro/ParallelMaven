@@ -427,7 +427,7 @@ package MBS.MavenBS;
 				Unirest.setTimeouts(0, 0);
 				String response = Unirest.put(putEndpoint)
 						.header("Content-Type", "application/json")
-						.body("{\n    \"status\":\"passed\",\n    \"reason\":\"it's done\"\n}")
+						.body("{\n    \"status\":\"failed\",\n    \"reason\":\"couldn't find title\"\n}")
 						.asString()
 						.getBody();
 				System.out.println(response);
