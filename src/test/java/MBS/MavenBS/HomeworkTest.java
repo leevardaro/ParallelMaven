@@ -72,7 +72,7 @@ package MBS.MavenBS;
 
 
 			  String putEndpoint = "https://" + username + ":" + accessKey + "@api.browserstack.com/automate/sessions/" + sID + ".json";
-
+			  System.out.println(putEndpoint);
 
 			  System.out.println(putEndpoint);
 
