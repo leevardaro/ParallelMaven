@@ -50,6 +50,8 @@ package MBS.MavenBS;
 		  caps.setCapability("os_version", "10");
 		  caps.setCapability("name", "Chrome");
 		  caps.setCapability("build", buildName);
+		  caps.setCapability("browserstack.local", browserstackLocal);
+		  caps.setCapability("browserstack.localIdentifier", browserstackLocalIdentifier);
 
 
 
