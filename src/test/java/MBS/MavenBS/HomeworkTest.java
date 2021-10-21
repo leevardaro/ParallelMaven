@@ -407,7 +407,7 @@ package MBS.MavenBS;
 			JavascriptExecutor jse = (JavascriptExecutor) driver;
 
 			WebDriverWait wait = new WebDriverWait(driver, 10);
-			driver.get("https://localhost:8080");
+			driver.get("http://localhost:8080");
 
 			SessionId session = ((RemoteWebDriver) driver).getSessionId();
 			String sID = session.toString();
