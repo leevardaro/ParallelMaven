@@ -395,7 +395,7 @@ package MBS.MavenBS;
 			caps.setCapability("browserstack.local", browserstackLocal);
 			caps.setCapability("browserstack.localIdentifier", browserstackLocalIdentifier);
 			caps.setCapability("browserstack.selenium_version", "3.7.1");
-			caps.setCapability("browserstack.geoLocation", "CN");
+			//caps.setCapability("browserstack.geoLocation", "CN");
 			caps.setCapability("browserstack.maskCommands", "setValues");
 			HashMap<String, Boolean> networkLogsOptions = new HashMap<>();
 			networkLogsOptions.put("captureContent", true);
