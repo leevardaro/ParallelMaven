@@ -26,7 +26,7 @@ package MBS.MavenBS;
 
 	public class HomeworkTest {
 
-		  public String username = System.getenv("BROWSERSTACK_username");
+		  public String username = System.getenv("BROWSERSTACK_USERNAME");
 		  public String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
 		  public static String buildName = System.getenv("BROWSERSTACK_BUILD_NAME");
 		  public static String browserstackLocal = System.getenv("BROWSERSTACK_LOCAL");
