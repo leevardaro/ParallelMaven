@@ -299,11 +299,12 @@ package MBS.MavenBS;
       long id = Thread.currentThread().getId();
       System.out.println("Simple test-method Four. Thread id is: " + id);
       DesiredCapabilities caps = new DesiredCapabilities();
-      caps.setCapability("browserName", "Edge");
-      caps.setCapability("browser_version", "latest");
-      caps.setCapability("os", "Windows");
-      caps.setCapability("os_version", "10");
-      caps.setCapability("name", "Edge"); 
+      //caps.setCapability("browserName", "Edge");
+		  //caps.setCapability("browser_version", "latest");
+     //caps.setCapability("os", "Windows");
+     //caps.setCapability("os_version", "10");
+		  caps.setCapability("platform","ANY");
+      caps.setCapability("name", "Any");
       caps.setCapability("build", buildName);
       
 
