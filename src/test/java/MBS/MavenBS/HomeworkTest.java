@@ -379,5 +379,49 @@ package MBS.MavenBS;
 		  }
 	  }
 
-	}
-	
+
+
+		@Test
+
+		public void testMethodsFive() {
+			long id = Thread.currentThread().getId();
+			System.out.println("Simple test-method One. Thread id is: " + id);
+			System.out.println("username is: " + username);
+			System.out.println("password is: " + accessKey);
+			System.out.println("Url is: " + URL);
+			DesiredCapabilities caps = new DesiredCapabilities();
+			caps.setCapability("browserName", "Chrome");
+			caps.setCapability("browser_version", "latest");
+			caps.setCapability("os", "Windows");
+			caps.setCapability("os_version", "10");
+			caps.setCapability("name", "Chrome");
+			caps.setCapability("build", buildName);
+			caps.setCapability("browserstack.local", browserstackLocal);
+			caps.setCapability("browserstack.localIdentifier", browserstackLocalIdentifier);
+
+
+			WebDriver driver = null;
+			try {
+				driver = new RemoteWebDriver(new URL(URL), caps);
+			} catch (MalformedURLException e1) {
+				e1.printStackTrace();
+			}
+			JavascriptExecutor jse = (JavascriptExecutor) driver;
+
+			WebDriverWait wait = new WebDriverWait(driver, 10);
+			driver.get("https://localhost:8080");
+			try {
+				wait.until(ExpectedConditions.titleContains("Sign in [Jenkins]"))
+				String putEndpoint = "https://" + username + ":" + accessKey + "@api.browserstack.com/automate/sessions/" + sID + ".json";
+
+				Unirest.setTimeouts(0, 0);
+				String response = Unirest.put(putEndpoint)
+						.header("Content-Type", "application/json")
+						.body("{\n    \"status\":\"passed\",\n    \"reason\":\"it's done\"\n}")
+						.asString()
+						.getBody();
+				System.out.println(response);
+			} catch (Exception e){
+				e.printStackTrace();
+			}
+		}}
