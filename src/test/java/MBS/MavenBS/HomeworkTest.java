@@ -2,9 +2,7 @@ package MBS.MavenBS;
 
 
 	import java.time.Duration;
-	import java.util.List;
-	import java.util.Hashtable;
-	import java.util.Iterator;
+	import java.util.*;
 	import java.net.MalformedURLException;
 	import java.net.URL;
 
@@ -396,6 +394,14 @@ package MBS.MavenBS;
 			caps.setCapability("build", buildName);
 			caps.setCapability("browserstack.local", browserstackLocal);
 			caps.setCapability("browserstack.localIdentifier", browserstackLocalIdentifier);
+			caps.setCapability("browserstack.selenium_version", "3.7.1");
+			caps.setCapability("browserstack.geoLocation", "CN");
+			caps.setCapability("browserstack.maskCommands", "setValues");
+			HashMap<String, Boolean> networkLogsOptions = new HashMap<>();
+			networkLogsOptions.put("captureContent", true);
+			caps.setCapability("browserstack.networkLogs", "true");
+			caps.setCapability("browserstack.networkLogsOptions", networkLogsOptions);
+
 
 
 			WebDriver driver = null;
