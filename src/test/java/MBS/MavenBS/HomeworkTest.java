@@ -12,6 +12,7 @@ package MBS.MavenBS;
 	import java.util.Hashtable;
 
 	import com.mashape.unirest.http.Unirest;
+	import com.mashape.unirest.http.exceptions.UnirestException;
 	import org.junit.Assert;
 	import org.openqa.selenium.By;
 	import org.openqa.selenium.JavascriptExecutor;
@@ -383,7 +384,7 @@ package MBS.MavenBS;
 
 		@Test
 
-		public void testMethodsFive() {
+		public void testMethodsFive() throws UnirestException {
 			long id = Thread.currentThread().getId();
 			System.out.println("Simple test-method Five. Thread id is: " + id);
 			DesiredCapabilities caps = new DesiredCapabilities();
