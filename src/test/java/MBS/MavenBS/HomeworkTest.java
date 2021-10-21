@@ -39,6 +39,8 @@ package MBS.MavenBS;
 	  public void testMethodsOne() {
 		  long id = Thread.currentThread().getId();
 		  System.out.println("Simple test-method One. Thread id is: " + id);
+		  System.out.println("username is: " + username);
+		  System.out.println("password is: " + accessKey);
 		  DesiredCapabilities caps = new DesiredCapabilities();
 		  caps.setCapability("browserName", "Chrome");
 		  caps.setCapability("browser_version", "latest");
