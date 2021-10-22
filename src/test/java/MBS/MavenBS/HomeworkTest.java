@@ -39,9 +39,6 @@ package MBS.MavenBS;
 	  public void testMethodsOne() {
 		  long id = Thread.currentThread().getId();
 		  System.out.println("Simple test-method One. Thread id is: " + id);
-		  System.out.println("username is: " + username);
-		  System.out.println("password is: " + accessKey);
-		  System.out.println("Url is: " +URL);
 		  DesiredCapabilities caps = new DesiredCapabilities();
 		  caps.setCapability("browserName", "Chrome");
 		  caps.setCapability("browser_version", "latest");
@@ -299,11 +296,10 @@ package MBS.MavenBS;
       long id = Thread.currentThread().getId();
       System.out.println("Simple test-method Four. Thread id is: " + id);
       DesiredCapabilities caps = new DesiredCapabilities();
-      //caps.setCapability("browserName", "Edge");
-		  //caps.setCapability("browser_version", "latest");
-     //caps.setCapability("os", "Windows");
-     //caps.setCapability("os_version", "10");
-		  caps.setCapability("platform","ANY");
+      caps.setCapability("browserstack.networkProfile", "3.5g-hspa-plus-lossy");
+	  caps.setCapability("real_mobile", "true");
+      caps.setCapability("device", "iPhone 12");
+	  caps.setCapability("os_version", "14");
       caps.setCapability("name", "Any");
       caps.setCapability("build", buildName);
       
@@ -396,12 +392,14 @@ package MBS.MavenBS;
 			caps.setCapability("browserstack.local", browserstackLocal);
 			caps.setCapability("browserstack.localIdentifier", browserstackLocalIdentifier);
 			caps.setCapability("browserstack.selenium_version", "3.7.1");
-			//caps.setCapability("browserstack.geoLocation", "CN");
+			/* caps.setCapability("browserstack.geoLocation", "CN");
 			caps.setCapability("browserstack.maskCommands", "setValues");
 			HashMap<String, Boolean> networkLogsOptions = new HashMap<>();
 			networkLogsOptions.put("captureContent", true);
 			caps.setCapability("browserstack.networkLogs", "true");
 			caps.setCapability("browserstack.networkLogsOptions", networkLogsOptions);
+			*/
+
 
 
 
