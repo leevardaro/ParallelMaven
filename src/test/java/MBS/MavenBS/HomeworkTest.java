@@ -296,7 +296,7 @@ package MBS.MavenBS;
       long id = Thread.currentThread().getId();
       System.out.println("Simple test-method Four. Thread id is: " + id);
       DesiredCapabilities caps = new DesiredCapabilities();
-      caps.setCapability("browserstack.networkProfile", "3.5g-hspa-plus-lossy");
+      caps.setCapability("browserstack.customNetwork", "('500','200','100','5')");
 	  caps.setCapability("real_mobile", "true");
       caps.setCapability("device", "iPhone 12");
 	  caps.setCapability("os_version", "14");
